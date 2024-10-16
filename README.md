@@ -13,7 +13,7 @@ This is a simple **Islamic Quote Generator** web application that displays rando
 
 ## Demo
 
-You can view a live demo of the app here: [Islamic Quote Generator Demo](#)
+You can view a live demo of the app here: [Islamic Quote Generator Demo](https://hauwajibrilibrahim.github.io/quote-generator/)
 
 ## Features
 
