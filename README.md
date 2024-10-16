@@ -11,10 +11,6 @@ This is a simple **Islamic Quote Generator** web application that displays rando
 - [Folder Structure](#folder-structure)
 - [License](#license)
 
-## Demo
-
-You can view a live demo of the app here: [Islamic Quote Generator Demo](https://hauwajibrilibrahim.github.io/quote-generator/)
-
 ## Features
 
 - Displays random Islamic quotes on page load or button click.
