@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Islamic Quote Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Islamic Quote Generator</h1>
+  <div id="quote-container">
+    <div id="quote">Loading quote...</div>
+    <div id="author"></div>
+    <div class="btn-container">
+      <button id="new-quote-btn">Get New Quote</button>
+      <button id="copy-quote-btn">Copy Quote</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to fetch and display a random quote
+    function fetchRandomQuote() {
+      fetch('/random-quote')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('quote').textContent = data.quote;
+          document.getElementById('author').textContent = `— ${data.author}`;
+        })
+        .catch(error => console.error('Error fetching quote:', error));
+    }
+
+    // Function to copy the current quote to the clipboard
+    function copyQuoteToClipboard() {
+      const quoteText = document.getElementById('quote').textContent;
+      const authorText = document.getElementById('author').textContent;
+      const fullQuote = `${quoteText} ${authorText}`;
+
+      navigator.clipboard.writeText(fullQuote)
+        .then(() => {
+          alert('Quote copied to clipboard!');
+        })
+        .catch(error => console.error('Failed to copy quote:', error));
+    }
+
+    // Initial quote load
+    fetchRandomQuote();
+
+    // Event listener for new quote button
+    document.getElementById('new-quote-btn').addEventListener('click', fetchRandomQuote);
+
+    // Event listener for copy quote button
+    document.getElementById('copy-quote-btn').addEventListener('click', copyQuoteToClipboard);
+  </script>
+</body>
+</html>
