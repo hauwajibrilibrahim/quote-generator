@@ -3,13 +3,11 @@
 This is a simple **Islamic Quote Generator** web application that displays random quotes with the option to copy them to the clipboard. The app is built using **Node.js**, **Express**, and serves quotes from a JSON file. The user interface is responsive and styled to look beautiful across all devices.
 
 ## Table of Contents
-- [Demo](#demo)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
-- [License](#license)
 
 ## Features
 
